@@ -1,177 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Escuela - CBTIS 29</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f4ff, #ffe4e6);
-            color: #2d2d2d;
-            margin: 0;
-            padding: 30px;
-            line-height: 1.9;
-        }
-        header {
-            background-color: #7f1d1d;
-            color: white;
-            text-align: center;
-            padding: 40px;
-            border-radius: 20px;
-            border: 4px solid #facc15;
-        }
-        h1 { font-size: 52px; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
-        h2 {
-            font-size: 34px;
-            color: #7f1d1d;
-            margin-top: 50px;
-            border-bottom: 4px dashed #7f1d1d;
-            padding: 10px 15px;
-            background-color: white;
-            border-radius: 8px;
-        }
-        p {
-            font-size: 19px;
-            background: white;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: justify;
-        }
-
-        /* --- FOTOS ACOMODADAS --- */
-        .contenedor-imagenes { 
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px; 
-            margin: 30px 0;
-        }
-        .caja-imagen {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 5px solid #7f1d1d;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-        .caja-imagen img {
-            width: 100%;
-            display: block;
-            height: 220px;
-            object-fit: cover;
-        }
-        .texto-imagen {
-            background: white;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            color: #7f1d1d;
-            font-size: 15px;
-        }
-        .leyenda-hover {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(127, 29, 29, 0.88);
-            color: #facc15;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            text-align: center;
-        }
-        .caja-imagen:hover .leyenda-hover { opacity: 1; }
-
-        /* Responsive para celular */
-        @media (max-width: 768px) {
-            .contenedor-imagenes { grid-template-columns: 1fr; }
-        }
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .contenedor-imagenes { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        table { width: 100%; border-collapse: separate; margin-top: 20px; background-color: white; border-radius: 15px; overflow: hidden; border: 4px solid #7f1d1d; }
-        th { background-color: #7f1d1d; color: white; padding: 15px; border: 2px solid #facc15; }
-        td { padding: 14px; border: 2px solid #e5e7eb; text-align: center; }
-        ul { background: white; padding: 25px 45px; border-radius: 12px; border-left: 8px solid #7f1d1d; font-size: 18px; }
-        .enlaces { text-align: center; margin-top: 20px; }
-        .enlaces a { display: inline-block; margin: 12px; padding: 14px 25px; background-color: #7f1d1d; color: white; font-weight: bold; text-decoration: none; border-radius: 10px; }
-        .enlaces a:hover { background-color: #facc15; color: #7f1d1d; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunas Más Interesantes - Mundos Ocultos</title>
+<link rel="stylesheet" href="lunas.css">
 </head>
 <body>
-    <header>
-        <h1>CBTIS No. 29</h1>
-        <p style="background:none; box-shadow:none; color:#facc15; text-align:center; padding:0; font-size:22px; font-weight:bold;">
-            José María Morelos y Pavón - Ecatepec de Morelos
-        </p>
-    </header>
 
-    <h2>Nuestra Escuela</h2>
-    <p>
-        El Centro de Bachillerato Tecnológico Industrial y de Servicios No. 29 es una institución de nivel medio superior 
-        perteneciente a la DGETI, ubicada en Ecatepec de Morelos.
-    </p>
-
-    <div class="contenedor-imagenes">
-        <div class="caja-imagen">
-            <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?w=600" alt="Fachada">
-            <div class="leyenda-hover">CBTIS No. 29<br>Fachada Principal</div>
-            <div class="texto-imagen">Fachada principal</div>
-        </div>
-        <div class="caja-imagen">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600" alt="Alumnos">
-            <div class="leyenda-hover">Alumnos en clases</div>
-            <div class="texto-imagen">Vida estudiantil</div>
-        </div>
-        <div class="caja-imagen">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600" alt="Laboratorio">
-            <div class="leyenda-hover">Laboratorio de Programación</div>
-            <div class="texto-imagen">Laboratorio de Programación</div>
-        </div>
-        <div class="caja-imagen">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600" alt="Biblioteca">
-            <div class="leyenda-hover">Biblioteca Escolar</div>
-            <div class="texto-imagen">Biblioteca</div>
-        </div>
-        <div class="caja-imagen">
-            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600" alt="Deportes">
-            <div class="leyenda-hover">Dobermans CBTIS 29</div>
-            <div class="texto-imagen">Deportes</div>
-        </div>
-        <div class="caja-imagen">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600" alt="Salón de clases">
-            <div class="leyenda-hover">Salones equipados</div>
-            <div class="texto-imagen">Salón de clases</div>
-        </div>
+<!-- ============ PÁGINA 1 - PORTADA ============ -->
+<div class="hoja activa" id="p1">
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+    <h1>Lunas Más Interesantes <span>"Mundos Ocultos"</span></h1>
+  </marquee>
+  <div class="estrellas">⭐ 🌙 🪐 ✨ 🌕 ⭐</div>
+  <div class="arriba">
+    <div class="texto-arriba">
+      ¿Sabías que hay <b>más de 200 lunas?</b><br>
+      Y algunas tienen <b>más agua que la Tierra.</b>
+      <span class="resaltado">🌌 "Explora las 5 más extremas que la NASA investiga para buscar vida"</span>
     </div>
+    <img class="img-chica" src="https://images.unsplash.com/photo-1532693322450-2cb5c511067d?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg'" alt="Luna">
+  </div>
+  <div class="abajo">
+    <img class="img-grande" src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/5/54/Europa-moon.jpg'" alt="Europa">
+    <div class="botonera-centro">
+      <a href="#p2" onclick="mostrar('p2'); return false;" class="btn">🚀 Contenido Principal</a>
+      <a href="#p3" onclick="mostrar('p3'); return false;" class="btn">🔭 Información Adicional</a>
+      <a href="#p4" onclick="mostrar('p4'); return false;" class="btn">💌 Contacto</a>
+    </div>
+  </div>
 
-    <h2>Lo Que Ofrecemos</h2>
-    <ul>
-        <li>Carreras técnicas: Programación, Contabilidad, Mecánica, Electrónica</li>
-        <li>Laboratorios de ciencias y cómputo equipados</li>
-        <li>Biblioteca y talleres deportivos y culturales</li>
-        <li>Actividades del equipo Dobermans CBTIS 29</li>
-    </ul>
+</div>
 
-    <h2>Horario de Atención</h2>
+<!-- ============ PÁGINA 2 - CONTENIDO PRINCIPAL ============ -->
+<div class="hoja" id="p2">
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+    <h1>Contenido Principal <span>"Las 5 Lunas"</span></h1>
+  </marquee>
+  <div class="estrellas">⭐ 🌙 🪐 ✨ 🌕 ⭐</div>
+
+  <div class="fila-lunas">
+    <div class="tarjeta-luna luna-1">
+      <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();"><h2> Luna 1 - Titán</h2></marquee>
+      <p><b>Planeta:</b> Saturno</p>
+      <p>Tiene lagos de metano líquido y una atmósfera espesa. Es como una Tierra fría y extraña.</p>
+      <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Titan_in_true_color.jpg'" alt="Titán">
+    </div>
+    <div class="tarjeta-luna luna-2">
+      <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();"><h2> Luna 2 - Europa</h2></marquee>
+      <p><b>Planeta:</b> Júpiter</p>
+      <p>Debajo de su hielo hay un océano con más agua que la Tierra. La NASA la investiga para buscar vida.</p>
+      <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/5/54/Europa-moon.jpg'" alt="Europa">
+    </div>
+  </div>
+
+  <div class="fila-lunas">
+    <div class="tarjeta-luna luna-3">
+      <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();"><h2> Luna 3 - Encélado</h2></marquee>
+      <p><b>Planeta:</b> Saturno</p>
+      <p>Lanza chorros de agua al espacio desde su polo sur. Tiene un océano escondido bajo el hielo.</p>
+      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/0/08/Enceladus_false_color.jpg'" alt="Encélado">
+    </div>
+    <div class="tarjeta-luna luna-4">
+      <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();"><h2> Luna 4 - Io</h2></marquee>
+      <p><b>Planeta:</b> Júpiter</p>
+      <p>Es el lugar con más volcanes del Sistema Solar. ¡Tiene más de 400 volcanes activos!</p>
+      <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/9/91/Io_highest_resolution_true_color.jpg'" alt="Io">
+    </div>
+  </div>
+
+  <div class="fila-lunas">
+    <div class="tarjeta-luna luna-5">
+      <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();"><h2> Luna 5 - Tritón</h2></marquee>
+      <p><b>Planeta:</b> Neptuno</p>
+      <p>Es la luna más fría, gira al revés y tiene géiseres de nitrógeno. ¡Es super rara!</p>
+      <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600&q=80" onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/2/22/Triton_moon_mosaic_Voyager_2.jpg'" alt="Tritón">
+    </div>
+    <div class="botonera-p2">
+      <a href="#p3" onclick="mostrar('p3'); return false;" class="btn btn-siguiente">Siguiente ➡️</a>
+      <a href="#p1" onclick="mostrar('p1'); return false;" class="btn btn-atras">⬅️ Atrás</a>
+    </div>
+  </div>
+  
+</div>
+
+<!-- ============ PÁGINA 3 - INFORMACIÓN ADICIONAL ============ -->
+<div class="hoja" id="p3">
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+    <h1>Información <span>Adicional</span></h1>
+  </marquee>
+  <div class="estrellas">⭐ 🌙 🪐 ✨ 🌕 ⭐</div>
+  <div class="tabla-info">
     <table>
-        <tr><th>Día</th><th>Horario</th><th>Profesor</th><th>Actividades</th></tr>
-        <tr><td>Lunes</td><td>7:00 - 14:00</td><td>Prof. García López</td><td>Clases normales</td></tr>
-        <tr><td>Martes</td><td>7:00 - 14:00</td><td>Prof. Martínez Ruiz</td><td>Laboratorio</td></tr>
-        <tr><td>Miércoles</td><td>7:00 - 15:00</td><td>Prof. Hernández Díaz</td><td>Educación física</td></tr>
-        <tr><td>Jueves</td><td>7:00 - 14:00</td><td>Prof. Ramírez Torres</td><td>Actividades culturales</td></tr>
-        <tr><td>Viernes</td><td>7:00 - 13:00</td><td>Prof. Sánchez Pérez</td><td>Deportes</td></tr>
+      <tr><th></th><th> Luna 1<br>Titán</th><th> Luna 2<br>Europa</th><th> Luna 3<br>Encélado</th><th> Luna 4<br>Io</th><th> Luna 5<br>Tritón</th></tr>
+      <tr><td class="col-izq"><b>🌡️ Temperatura</b></td><td>-179°C</td><td>-160°C</td><td>-198°C</td><td>-130°C</td><td>-235°C<br><b>¡La más fría!</b></td></tr>
+      <tr><td class="col-izq"><b>🪐 Distancia a su planeta</b></td><td>1,221,870 km<br>Saturno</td><td>671,000 km<br>Júpiter</td><td>237,948 km<br>Saturno</td><td>421,700 km<br>Júpiter</td><td>354,760 km<br>Neptuno</td></tr>
+      <tr><td class="col-izq"><b>✨ Dato Interesante</b></td><td>Tiene lagos de metano líquido</td><td>Tiene más agua que la Tierra</td><td>Lanza chorros de agua al espacio</td><td>Tiene +400 volcanes activos</td><td>Gira al revés y tiene géiseres</td></tr>
     </table>
-
-    <h2>Enlaces Oficiales</h2>
-    <div class="enlaces">
-        <a href="https://www.facebook.com/CBTis29Oficial/" target="_blank">Facebook CBTIS 29</a>
-        <a href="https://www.gob.mx/sep" target="_blank">SEP</a>
+  </div>
+  <div class="abajo-p3">
+    <div class="glosario">
+      <h2>📖 Glosario</h2>
+      <p><b>Luna:</b> Cuerpo que gira alrededor de un planeta.</p>
+      <p><b>Órbita:</b> El camino que sigue una luna alrededor de su planeta.</p>
+      <p><b>Atmósfera:</b> Capa de gases que rodea a un planeta o luna.</p>
+      <p><b>Océano subterráneo:</b> Agua líquida escondida debajo del hielo.</p>
+      <p><b>Géiser:</b> Chorro de agua o gas que sale con mucha fuerza.</p>
     </div>
+    <div class="botonera-p2">
+      <a href="#p4" onclick="mostrar('p4'); return false;" class="btn btn-siguiente">Siguiente ➡️</a>
+      <a href="#p2" onclick="mostrar('p2'); return false;" class="btn btn-atras">⬅️ Atrás</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ PÁGINA 4 - CONTACTO SIN GUARDAR ============ -->
+<div class="hoja" id="p4">
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+    <h1>Contacto <span>💌</span></h1>
+  </marquee>
+  <div class="estrellas">⭐ 🌙 🪐 ✨ 🌕 ⭐</div>
+  <div class="contacto-datos">
+    <p><b>📧 Email:</b> mundos.ocultos@escuela.mx</p>
+    <p><b>📸 Instagram:</b> @mundos.ocultos.lunas</p>
+    <p><b>👩‍🎓 Créditos:</b> Proyecto escolar - Lunas Más Interesantes</p>
+    <p><b>📞 Número:</b> 555-010-1234</p>
+  </div>
+  <div class="abajo-p4">
+    <form class="formulario" onsubmit="enviarForm(event)">
+      <h2>📝 Formulario</h2>
+      <label>Nombre:</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+      <label>Correo:</label>
+      <input type="email" id="correo" placeholder="Escribe tu correo" required>
+      <label>¿Qué luna te gustaría conocer?</label>
+      <select id="luna-fav" required>
+        <option value="">Elige una luna...</option>
+        <option>🟠 Titán</option>
+        <option>🔵 Europa</option>
+        <option>⚪ Encélado</option>
+        <option>🔴 Io</option>
+        <option>🟣 Tritón</option>
+      </select>
+      <label>¿Por qué la elegiste?</label>
+      <textarea id="motivo" rows="3" placeholder="Cuéntanos por qué te llamó la atención..."></textarea>
+      <p id="mensaje-gracias" class="gracias">¡Gracias por tu respuesta! 🌙✨</p>
+    </form>
+    <div class="botonera-p2">
+      <a href="#p3" onclick="mostrar('p3'); return false;" class="btn btn-atras">⬅️ Atrás</a>
+      <button type="button" onclick="enviarForm(event)" class="btn btn-finalizar">Finalizar 🎉</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function mostrar(id) {
+  document.querySelectorAll('.hoja').forEach(function(hoja) {
+    hoja.classList.remove('activa');
+  });
+  document.getElementById(id).classList.add('activa');
+  window.scrollTo(0, 0);
+}
+
+function enviarForm(e) {
+  if(e) e.preventDefault();
+  var nombre = document.getElementById('nombre').value;
+  var luna = document.getElementById('luna-fav').value;
+  if(nombre == '' || luna == '') {
+    alert('Porfa llena tu nombre y elige una luna 🌙');
+    return;
+  }
+  // Ya NO se guarda nada, solo muestra el mensaje
+  document.getElementById('mensaje-gracias').style.display = 'block';
+  document.getElementById('mensaje-gracias').innerHTML = '¡Gracias ' + nombre + '! Te gustaría conocer ' + luna + ' 🌙✨';
+  alert('¡Gracias ' + nombre + '! Te gustaría conocer ' + luna + ' 🚀');
+  // Limpia el formulario
+  document.getElementById('nombre').value = '';
+  document.getElementById('correo').value = '';
+  document.getElementById('motivo').value = '';
+  document.getElementById('luna-fav').value = '';
+}
+</script>
+
 </body>
 </html>

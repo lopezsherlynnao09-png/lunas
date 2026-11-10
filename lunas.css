@@ -1,0 +1,304 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #0b0033;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 30px 30px;
+  padding: 15px;
+}
+
+.hoja {
+  max-width: 920px; margin: auto;
+  background: linear-gradient(180deg, #1a0b4a, #2d1a6e, #4a1e8f);
+  border: 3px solid #ff8fab; border-radius: 20px;
+  padding: 20px; box-shadow: 0 0 25px #ff8fab88;
+  color: white; overflow: hidden;
+}
+
+.fecha {
+  display: flex; justify-content: space-between;
+  background: #ff8fab; color: #2d0036; font-weight: bold;
+  padding: 8px 12px; border-radius: 10px; font-size: 14px; margin-bottom: 18px;
+}
+
+h1 {
+  text-align: center; font-size: 38px; line-height: 1.1; margin-bottom: 5px;
+  color: #ffe66d; text-shadow: 0 0 15px #ffe66d, 2px 2px 0 #ff4d8d;
+}
+h1 span {
+  display: block; font-size: 30px; color: #ff8fab;
+  text-shadow: 0 0 12px #ff8fab; margin-top: 4px;
+}
+
+.estrellas { text-align: center; font-size: 22px; letter-spacing: 8px; margin-bottom: 15px; }
+
+/* PÁGINA 1 - ARRIBA */
+.arriba {
+  display: flex; gap: 15px; align-items: center;
+  background: rgba(255,255,255,0.12);
+  border: 2px dashed #a8e6ff; border-radius: 15px;
+  padding: 15px; margin-bottom: 18px;
+}
+.texto-arriba { flex: 1; font-size: 19px; line-height: 1.45; }
+.texto-arriba b { color: #a8e6ff; }
+.resaltado {
+  display: block; margin-top: 10px; background: #ffe66d; color: #3b0066;
+  padding: 8px 10px; border-radius: 10px; font-weight: bold; font-size: 16px;
+}
+.img-chica {
+  width: 185px; height: 125px; object-fit: cover;
+  border: 3px solid #ffe66d; border-radius: 50%; box-shadow: 0 0 20px #ffe66d;
+}
+
+/* PÁGINA 1 - ABAJO */
+.abajo { display: flex; gap: 15px; align-items: stretch; }
+.img-grande {
+  width: 210px; object-fit: cover;
+  border: 3px solid #a8e6ff; border-radius: 15px; box-shadow: 0 0 18px #a8e6ff88;
+}
+.botonera-centro {
+  flex: 1; display: flex; flex-direction: column; gap: 14px; justify-content: center;
+}
+.btn {
+  display: block; text-align: center; text-decoration: none; color: white;
+  font-weight: bold; font-size: 20px; padding: 18px 10px;
+  border-radius: 15px; border: 2px solid white; transition: 0.2s;
+}
+.btn:nth-child(1) { background: linear-gradient(90deg, #ff4d8d, #ff8fab); box-shadow: 0 5px 0 #a8004a; }
+.btn:nth-child(2) { background: linear-gradient(90deg, #00c2ff, #6a5cff); box-shadow: 0 5px 0 #003a8c; }
+.btn:nth-child(3) { background: linear-gradient(90deg, #ffb800, #ff7a00); box-shadow: 0 5px 0 #8c3d00; color: #2d0036; }
+.btn:hover { transform: scale(1.03); }
+
+.lista-lunas {
+  width: 190px; background: #fff7d6; color: #2d0036;
+  border: 3px solid #ffe66d; border-radius: 15px;
+  padding: 13px; font-size: 16px; line-height: 1.8;
+}
+.lista-lunas b {
+  display: block; text-align: center; background: #2d0036; color: #ffe66d;
+  padding: 5px; border-radius: 8px; margin-bottom: 8px;
+}
+
+.footer { text-align: center; margin-top: 18px; font-size: 13px; opacity: 0.9; }
+
+/* MARQUEE - TÍTULO EN MOVIMIENTO */
+marquee h1 {
+  display: inline-block; white-space: nowrap; margin: 0; padding: 5px 0;
+}
+marquee h1 span { display: inline; margin-left: 10px; }
+
+/* ===== PÁGINA 2 - CONTENIDO PRINCIPAL ===== */
+.fila-lunas { display: flex; gap: 15px; margin-bottom: 15px; align-items: stretch; }
+
+.tarjeta-luna {
+  flex: 1; background: rgba(255,255,255,0.95); color: #2d0036;
+  border-radius: 15px; padding: 14px; border: 3px solid white;
+}
+.tarjeta-luna h2 {
+  font-size: 20px; margin-bottom: 8px; padding: 6px;
+  border-radius: 8px; text-align: center; color: white;
+}
+.luna-1 h2 { background: #ff7a00; }
+.luna-2 h2 { background: #00c2ff; }
+.luna-3 h2 { background: #6a5cff; }
+.luna-4 h2 { background: #ff4d4d; }
+.luna-5 h2 { background: #a100ff; }
+.tarjeta-luna p { font-size: 15px; line-height: 1.4; margin-bottom: 8px; }
+.tarjeta-luna img {
+  width: 100%; height: 140px; object-fit: cover;
+  border-radius: 10px; border: 2px solid #ddd;
+}
+
+.botonera-p2 {
+  flex: 1; display: flex; flex-direction: column; gap: 15px; justify-content: center;
+}
+.btn-siguiente {
+  background: linear-gradient(90deg, #00c853, #00e676) !important;
+  box-shadow: 0 5px 0 #00692e !important; color: white !important;
+}
+.btn-atras {
+  background: linear-gradient(90deg, #ff4d8d, #ff8fab) !important;
+  box-shadow: 0 5px 0 #a8004a !important; color: white !important;
+}
+
+@media (max-width: 650px) {
+  .arriba, .abajo, .fila-lunas { flex-direction: column; }
+  .img-chica, .img-grande, .lista-lunas { width: 100%; }
+  .img-grande { height: 200px; }
+  .tarjeta-luna img { height: 180px; }
+  h1 { font-size: 28px; }
+  h1 span { font-size: 22px; }
+}
+/* ===== SOLO SE VE UNA SECCIÓN A LA VEZ ===== */
+.hoja {
+  display: none;
+}
+.hoja.activa {
+  display: block;
+}
+/* ===== PÁGINA 3 - INFORMACIÓN ADICIONAL ===== */
+.tabla-info {
+  background: white;
+  border-radius: 15px;
+  padding: 10px;
+  border: 3px solid #ffe66d;
+  overflow-x: auto;
+  margin-bottom: 15px;
+}
+.tabla-info table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #2d0036;
+  font-size: 14px;
+  text-align: center;
+}
+.tabla-info th {
+  background: #2d0036;
+  color: #ffe66d;
+  padding: 10px 6px;
+  font-size: 14px;
+}
+.tabla-info td {
+  padding: 10px 6px;
+  border-bottom: 2px solid #eee;
+  line-height: 1.4;
+}
+.tabla-info tr:nth-child(even) td {
+  background: #fff7d6;
+}
+.col-izq {
+  text-align: left !important;
+  background: #ff8fab !important;
+  color: white !important;
+  min-width: 110px;
+}
+
+.abajo-p3 {
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+}
+.glosario {
+  flex: 1;
+  background: rgba(255,255,255,0.95);
+  color: #2d0036;
+  border-radius: 15px;
+  padding: 15px;
+  border: 3px solid #a8e6ff;
+}
+.glosario h2 {
+  text-align: center;
+  background: #6a5cff;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.glosario p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 6px;
+}
+
+@media (max-width: 650px) {
+  .abajo-p3 { flex-direction: column; }
+  .tabla-info { font-size: 12px; }
+}
+/* ===== PÁGINA 4 - CONTACTO ===== */
+.contacto-datos {
+  background: rgba(255,255,255,0.95);
+  color: #2d0036;
+  border-radius: 15px;
+  padding: 15px;
+  border: 3px solid #ff8fab;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 2;
+}
+.contacto-datos b { color: #6a5cff; }
+
+.abajo-p4 {
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+}
+.formulario {
+  flex: 1;
+  background: white;
+  color: #2d0036;
+  border-radius: 15px;
+  padding: 15px;
+  border: 3px solid #a8e6ff;
+}
+.formulario h2 {
+  text-align: center;
+  background: #ff4d8d;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.formulario label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  font-size: 15px;
+}
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+}
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  border-color: #ff4d8d;
+}
+.gracias {
+  display: none;
+  background: #d4ffdd;
+  color: #00692e;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 12px;
+}
+.btn-finalizar {
+  background: linear-gradient(90deg, #00c853, #00e676) !important;
+  box-shadow: 0 5px 0 #00692e !important;
+  color: white !important;
+  border: 2px solid white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@media (max-width: 650px) {
+  .abajo-p4 { flex-direction: column; }
+}
+/* ===== TÍTULOS DE LAS LUNAS EN MOVIMIENTO ===== */
+.tarjeta-luna marquee {
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.tarjeta-luna marquee h2 {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+  padding: 6px 10px;
+  width: auto;
+}
